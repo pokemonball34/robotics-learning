@@ -1,0 +1,43 @@
+public class ShooterLearning extends Command {
+
+//Taken from FIRST 
+
+  public Shoot() {
+    requires(shooter);
+  }
+  
+  protected void initialize() {
+    shoot();
+  }
+  
+  proteced void execute() {} // do nothing
+  
+  protected boolean isFinished() {
+    return true;
+  }
+  
+  protected void end() {} // do nothing
+  protected void interrupted() {
+    end();
+  }
+}
+//Aim Shooter
+  SetTargetAngle();
+  while (!AtRightAngle) {
+      CorrectingAngle();
+      delay(); //Delay is to prevent maxing CPU
+  }
+  HoldAngle();
+
+//Spin up to speed
+  SetTargetSpeed();
+  while (!FastEnough) {
+      SpeedUp();
+      delay();
+  }
+  HoldSpeed();
+
+//Shoot Frisbee
+  Shoot();
+
+}
