@@ -19,14 +19,14 @@ public class ArcadeDrive extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	System.out.println("Starting up Arcade Drive...");
-    	Robot.driveTrain.getLeftAxis();
-    	Robot.driveTrain.getRightAxis();
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	System.out.println("Executing Arcade Drive...");
     	Robot.driveTrain.arcadeDrive(1.0, 0.0);
+    	Robot.driveTrain.getLeftAxis();
+    	Robot.driveTrain.getRightAxis();
     }
 
     // Make this return true when this Command no longer needs to run execute()
