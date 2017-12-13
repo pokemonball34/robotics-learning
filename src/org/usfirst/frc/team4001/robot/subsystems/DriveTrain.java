@@ -18,7 +18,7 @@ public class DriveTrain extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-	private final CANTalon frontLeftMotor;
+    private final CANTalon frontLeftMotor;
     private final CANTalon frontRightMotor;
     private final CANTalon rearLeftMotor;
     private final CANTalon rearRightMotor;
@@ -49,20 +49,9 @@ public class DriveTrain extends Subsystem {
     {
     	drive.arcadeDrive(0, 0);
     }
-
-    public void getRightAxis() {
-    	//drive.arcadeDrive(moveValue, rotateValue, squaredInputs);
+    public void initDefaultCommand() {
+	// Set the default command for a subsystem here.
+	setDefaultCommand(new ArcadeDrive());
     }
-    
-	public void getLeftAxis() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	public void initDefaultCommand() {
-		// Set the default command for a subsystem here.
-		setDefaultCommand(new ArcadeDrive());
-	}
-
 }
 
